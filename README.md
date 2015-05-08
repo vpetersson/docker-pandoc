@@ -10,7 +10,7 @@ To resolve this, we've packaged all of this into a Docker container. By default,
 
 The container is configured to convert all Markdown (.md or .markdown) and LaTeX (.tex) documents found in `/docs` (inside the container) to PDF files.
 
-    $ docker run -t \
+    $ docker run --rm \
       -v /folder/with/markdown:/docs \
       vpetersson/pandoc
 
@@ -28,7 +28,7 @@ Similarly, Markdown doesn't support dates, but you can use `\today` from LaTeX f
 
 ## Command reference
 
-The command used for coverting documents are:
+The command used for converting documents are:
 
     $ pandoc \
       -V geometry:margin=1in \
